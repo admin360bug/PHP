@@ -1,0 +1,342 @@
+@font-face {
+  font-family: Anurati;
+  src: url('../fonts/Anurati-Regular.otf');
+}
+
+body,
+html {
+  position: relative;
+  height: 100%;
+  margin: 0;
+  background: #563d7c;
+  font-family: 'Abel';
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+main {
+  background: url('../img/10.jpeg') #563d7c;
+  min-height: 100vh;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  position: relative;
+  z-index: 5;
+}
+
+main * {
+  z-index: 3;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+h1 {
+  font-family: 'Anurati';
+  font-size: 100px;
+  letter-spacing: -5px;
+  -webkit-text-stroke: 4px white;
+  color: transparent;
+  margin: 0;
+}
+
+h2 {
+  font-size: 36px;
+  margin: 0;
+  font-weight: lighter;
+  text-transform: uppercase;
+  letter-spacing: 19px;
+}
+
+nav {
+  position: fixed;
+  bottom: 20px;
+  left: 30px;
+  text-align: center;
+  z-index: 4;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+
+nav ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+nav ul li a {
+  font-size: 16px;
+  font-weight: 600;
+  padding: 4px 0;
+  margin: 0 15px;
+  display: inline-block;
+  vertical-align: middle;
+  opacity: 0.5;
+  position: relative;
+}
+
+nav ul li a:hover {
+  opacity: 1;
+}
+
+nav ul li a.active {
+  font-size: 30px;
+  opacity: 1;
+}
+
+nav ul li a.active::before {
+  content: '';
+  width: 30px;
+  position: absolute;
+  height: 1px;
+  background: #fff;
+  right: -35px;
+  top: 50%;
+}
+
+.logo {
+  position: fixed;
+  font-family: Anurati;
+  color: transparent;
+  width: 293px;
+  height: 80px;
+  text-align: center;
+  left: 30px;
+  top: 30px;
+  font-weight: bolder;
+  -webkit-text-stroke: 2.5px white;
+  padding-left: 6px;
+  padding-top: 4px;
+  z-index: 6;
+}
+
+.logo img{
+  width: 100%;
+  height: 100%;
+}
+
+.btn{
+  margin: 20px;
+  border: 1px solid #ccc;
+  background-color: transparent;
+  background-image: none;
+  box-sizing: border-box;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'Abel';
+  font-size: 14px;
+  font-weight: 600;
+  height: 48px;
+  letter-spacing: 10px;
+  line-height: 18.6667px;
+  padding-bottom: 14px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 14px;
+  text-align: center;
+  text-decoration-color: rgb(255, 255, 255);
+  text-decoration-line: none;
+  text-decoration-style: solid;
+  text-rendering: optimizelegibility;
+  text-size-adjust: 100%;
+  touch-action: manipulation;
+  transition-delay: 0s;
+}
+
+main .down-btn{
+  position: absolute;
+  bottom: 35px;
+  left: 50px;
+}
+
+.github .icon,
+main .icon {
+  color: #fff;
+  font-size: 2rem;
+}
+
+.github {
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  z-index: 11;
+}
+
+section {
+  min-height: 100vh;
+  color: #ddd;
+  padding: 10vh 12vw;
+  text-align: justify;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 2;
+}
+
+section::after,
+main::after {
+  content: '';
+  position: absolute;
+  background: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+section:nth-of-type(1) {
+  text-indent: 2rem;
+  background: url('../img/6.jpeg');
+  background-size: cover;
+  font-size: 32px;
+}
+
+section:nth-of-type(2) {
+  background: url('../img/9.jpeg');
+  background-size: cover;
+}
+
+section:nth-of-type(2),
+section:nth-of-type(3){
+  flex-direction: row;
+  font-size: 30px;
+  line-height: 2;
+}
+
+section:nth-of-type(3) {
+  background: url('../img/11.jpeg');
+  background-size: cover;
+}
+
+
+section:nth-of-type(2n+1) {
+  background-attachment: fixed;
+}
+
+footer {
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 12px 30px;
+  margin-top: auto;
+  font-size: 13px;
+  letter-spacing: 2px;
+  color: #fff;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+footer a:hover {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.mini-logo {
+  font-family: Anurati;
+  font-size: 26px;
+  letter-spacing: -0.5px;
+}
+
+p {
+  z-index: 2;
+  color: #ddd;
+}
+
+/* media queries */
+@media (max-width: 769px) {
+  section {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  h1 {
+    font-size: 44px;
+    -webkit-text-stroke: 2px white;
+    letter-spacing: -2px;
+  }
+
+  h2 {
+    font-size: 20px;
+    letter-spacing: 6px;
+  }
+
+  footer {
+    flex-direction: column;
+    padding: 8px;
+  }
+
+  .logo,
+  .github {
+    top: 20px;
+  }
+
+  .logo {
+    left: 20px;
+    font-size: 35px;
+    padding-top: 0;
+  }
+
+  .github {
+    right: 20px;
+  }
+
+  main a {
+    left: 30px;
+    bottom: 60px;
+  }
+
+  section:nth-of-type(n) p {
+    width: 100%;
+    margin: 15px 0;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  nav {
+    width: 100%;
+    height: auto;
+    left: 0;
+    bottom: auto;
+    top: 10px;
+    text-align: center;
+    padding: 0 15px;
+  }
+
+  nav ul li {
+    display: inline-block;
+  }
+
+  nav ul {
+    width: 100%;
+  }
+
+  nav ul li a {
+    font-size: 15px;
+    margin: 0 2px;
+    width: 16.66%;
+  }
+
+  nav ul li a.active {
+    font-size: 20px;
+  }
+
+  nav ul li a.active::before {
+    width: 1px;
+    height: 15px;
+    top: 95%;
+    right: -6px;
+  }
+}
